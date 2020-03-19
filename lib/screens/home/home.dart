@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/vaping_hippie.png'),
+              image: AssetImage('assets/vbackground.png'),
               fit: BoxFit.cover,
             ),
           ),
