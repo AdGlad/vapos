@@ -19,11 +19,13 @@ class _RegisterState extends State<Register> {
   String error='';
   bool loading = false;
   @override
+
+
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[100],
+      backgroundColor: Colors.blue[100],
       appBar: AppBar(
-        backgroundColor: Colors.brown[400],
+        backgroundColor: Colors.blue[400],
         elevation: 0.0,
         title: Text('Sign up for vapos'),
         actions: <Widget>[
@@ -43,6 +45,7 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: textInputDecoration.copyWith(hintText: 'Email',),
                 validator: (val) => val.isEmpty ? 'Enter Email' : null,
                 onChanged: (val) {
