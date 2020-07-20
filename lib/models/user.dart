@@ -9,9 +9,11 @@ class UserData {
   final String sex;
   final String dob;
   final int strength;
+  final String whyquit;
+  final int dailyspend;
   final String startdate;
   final int frequency;
 
-  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.startdate,this.frequency});
+  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.whyquit,this.dailyspend,this.startdate,this.frequency});
 
 }
