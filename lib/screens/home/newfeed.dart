@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'NewsListView.dart';
 
 class Newsfeed extends StatelessWidget {
   @override
@@ -9,20 +10,11 @@ class Newsfeed extends StatelessWidget {
         title: Text('Newsfeed Page'),
         //backgroundColor: Colors.redAccent,
       ),
-             body: Container(
-                child: Column(
-                  children: <Widget>[
-                    Expanded(
-                      child: Container(
-                        child: Image(
-                          image: AssetImage('assets/News.png'),
-                          fit: BoxFit.fitHeight,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+        body: Center(
+             child: NewsListView()
               ),
-            );
-          }
-        }
+      );
+      }
+    }
+
+ 
