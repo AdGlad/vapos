@@ -15,12 +15,14 @@ class _VapeListState extends State<VapeList> {
     final vapes = Provider.of<List<Vape>>(context) ?? [];
     //print(vapes.documents);
     vapes.forEach((vape) { 
-      print(vape.name);
-     print(vape.sex);
-     print(vape.dob);
+     print(vape.name);
+     //print(vape.sex);
+     //print(vape.dob);
      print(vape.strength);
-     print(vape.startdate);
+     //print(vape.startdate);
      print(vape.frequency);
+     //print(vape.dailyspend);
+     //print(vape.whyquit);
     });
     
     return ListView.builder(
