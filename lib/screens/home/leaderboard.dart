@@ -20,8 +20,8 @@ class _LeaderHomePageState extends State<LeaderHomePage> {
         domainFn: (Leader leader, _) => leader.name,
         measureFn: (Leader leader, _) => leader.score,
         colorFn: (Leader leader, _) =>
-           charts.ColorUtil.fromDartColor(Colors.blue),
-           // charts.ColorUtil.fromDartColor(Color(int.parse(leader.colorVal))),
+           //charts.ColorUtil.fromDartColor(Colors.blue),
+            charts.ColorUtil.fromDartColor(Color(int.parse(leader.colorVal))),
         id: 'leaders',
         data: mydata,
         labelAccessorFn: (Leader row, _) => "${row.score}",
@@ -61,7 +61,7 @@ class _LeaderHomePageState extends State<LeaderHomePage> {
           child: Column(
             children: <Widget>[
               Text(
-                'Time spent on daily leaders',
+                'Highest Vapors',
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(
