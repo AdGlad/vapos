@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:vapos/models/vape.dart';
 import 'package:vapos/models/user.dart';
 
@@ -26,6 +27,7 @@ DatabaseService({this.uid});
         'whyquit': whyquit,
         'dailyspend': dailyspend,
         'frequency': frequency,
+         'score': frequency * strength,
     });
  }
 
@@ -36,12 +38,13 @@ List<Vape> _vapeListFromSnapshot(QuerySnapshot snapshot) {
       name: doc.data['name'] ?? '',
       sex: doc.data['sex'] ?? '',
       dob: doc.data['dob'] ?? '',
-      strength: doc.data['strength'] ?? '',
+      strength: doc.data['strength'] ?? 0,
       whyquit: doc.data['whyquit'] ?? '',
-      dailyspend: doc.data['dailyspend'] ?? '',
+      dailyspend: doc.data['dailyspend'] ?? 0,
       startdate: doc.data['startdate'] ?? '',
-      frequency: doc.data['frequency'] ?? 0
-    );
+      frequency: doc.data['frequency'] ?? 0,
+      score: doc.data['score'] ?? 0
+      );
   }).toList();
 }
 
@@ -63,6 +66,7 @@ UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
     dailyspend: snapshot.data['dailyspend'],
     startdate: snapshot.data['startdate'],
     frequency: snapshot.data['frequency'],
+    score: snapshot.data['score'],
     );
 }
 

@@ -69,7 +69,7 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Rewards() ));
     } else if (index == 6)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Leaderboard() ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
     }  else if (index == 7)
     {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Plan() ));

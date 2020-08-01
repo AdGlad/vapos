@@ -13,7 +13,8 @@ class UserData {
   final int dailyspend;
   final String startdate;
   final int frequency;
+  final int score;
 
-  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.whyquit,this.dailyspend,this.startdate,this.frequency});
+  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.whyquit,this.dailyspend,this.startdate,this.frequency,this.score});
 
 }

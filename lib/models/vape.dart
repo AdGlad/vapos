@@ -9,6 +9,7 @@ class Vape {
   final int strength;
   final String startdate;
   final int frequency;
+  final int score;
 
   Vape(  {this.name,
   this.sex,
@@ -17,7 +18,8 @@ class Vape {
   this.whyquit,
   this.dailyspend,
   this.startdate,
-  this.frequency}
+  this.frequency,
+  this.score}
   );
 
 }
