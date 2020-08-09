@@ -18,8 +18,14 @@ class VapeTile extends StatelessWidget {
             backgroundColor: Colors.blue[vape.strength],
             backgroundImage: AssetImage('assets/atomizer.png'),
             ),
-            title: Text(vape.name),
-            subtitle: Text('Started on ${vape.startdate}.'),
+            title: Text(vape.name ,
+                 style: TextStyle(
+                 fontSize: 15,
+                 fontWeight: FontWeight.bold,
+              color: Colors.blueGrey,
+            ),
+            ), 
+            subtitle: Text('Started vaping on ${vape.startdate}. Spends \$${vape.dailyspend} a day and vapes about ${vape.frequency} times daily. ${vape.whyquit} is my motivation to quit'),
             ),
             )
       );
