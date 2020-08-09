@@ -17,7 +17,8 @@ DatabaseService({this.uid});
                                String whyquit,
                                int dailyspend,
                                String startdate,
-                               int frequency) async {
+                               int frequency,
+                               String colorVal) async {
       return await vapeCollection.document(uid).setData({
         'name': name,
         'sex': sex,
@@ -28,6 +29,7 @@ DatabaseService({this.uid});
         'dailyspend': dailyspend,
         'frequency': frequency,
          'score': frequency * strength,
+         'colorVal': colorVal,
     });
  }
 
@@ -43,7 +45,8 @@ List<Vape> _vapeListFromSnapshot(QuerySnapshot snapshot) {
       dailyspend: doc.data['dailyspend'] ?? 0,
       startdate: doc.data['startdate'] ?? '',
       frequency: doc.data['frequency'] ?? 0,
-      score: doc.data['score'] ?? 0
+      score: doc.data['score'] ?? 0,
+      colorVal: doc.data['colorVal'] ?? '0xFF90A5F5',
       );
   }).toList();
 }
@@ -67,6 +70,7 @@ UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
     startdate: snapshot.data['startdate'],
     frequency: snapshot.data['frequency'],
     score: snapshot.data['score'],
+    colorVal: snapshot.data['colorVal'],
     );
 }
 

@@ -10,6 +10,7 @@ class Vape {
   final String startdate;
   final int frequency;
   final int score;
+  final String colorVal;
 
   Vape(  {this.name,
   this.sex,
@@ -19,7 +20,8 @@ class Vape {
   this.dailyspend,
   this.startdate,
   this.frequency,
-  this.score}
+  this.score,
+  this.colorVal}
   );
 
 }

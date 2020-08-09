@@ -32,16 +32,16 @@ Widget build(BuildContext context) {
         backgroundColor: Colors.blue[400],
         elevation: 0.0,
         actions: <Widget>[
-          FlatButton.icon(
-            icon: Icon(Icons.contacts), 
-            label: Text('Users'),
-            onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => UserList()),
-                );
-            },
-            ),
+          //FlatButton.icon(
+          //  icon: Icon(Icons.contacts), 
+          //  label: Text('Users'),
+          //  onPressed: () {
+          //      Navigator.push(
+          //        context,
+          //        MaterialPageRoute(builder: (context) => UserList()),
+          //      );
+          //  },
+          //  ),
           FlatButton.icon(
             icon: Icon(Icons.person), 
             label: Text('Log out'),

@@ -28,6 +28,7 @@ class _SettingsFormState extends State<SettingsForm> {
   int _currentDailyspend;
   String _currentStartdate;
   int _currentFrequency;
+  String _currentcolorVal;
 
   @override
   Widget build(BuildContext context) {
@@ -127,18 +128,11 @@ class _SettingsFormState extends State<SettingsForm> {
                                 _currentWhyquit ?? snapshot.data.whyquit, 
                                 _currentDailyspend ?? snapshot.data.dailyspend,                                 
                                 _currentStartdate ?? snapshot.data.startdate, 
-                                _currentFrequency ?? snapshot.data.frequency
+                                _currentFrequency ?? snapshot.data.frequency,
+                                _currentcolorVal ?? snapshot.data.colorVal
 
                               );
                               Navigator.pop(context);
-                              print(_currentName);
-                              print( _currentSex);
-                              print(_currentDob);
-                              print(_currentStrength);
-                              print(_currentWhyquit);
-                              print(_currentDailyspend);
-                              print(_currentStartdate);
-                              print(_currentFrequency);
                                               }
                   }
                 ),

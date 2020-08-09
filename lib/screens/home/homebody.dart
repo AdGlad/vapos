@@ -7,7 +7,7 @@ import 'package:vapos/screens/home/leaderboard.dart';
 import 'package:vapos/screens/home/health.dart';
 import 'package:vapos/screens/home/plan.dart';
 import 'package:vapos/screens/home/chat.dart';
-
+import 'package:vapos/screens/Vapors/user_list.dart';
 
 class Homebody extends StatelessWidget {
   @override
@@ -54,7 +54,7 @@ class Homebody extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Newsfeed()));
     } else if (index == 1)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => UserList() ));
     } else if (index == 2)
     {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));

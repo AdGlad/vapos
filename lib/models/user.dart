@@ -14,7 +14,8 @@ class UserData {
   final String startdate;
   final int frequency;
   final int score;
+  final String colorVal;
 
-  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.whyquit,this.dailyspend,this.startdate,this.frequency,this.score});
+  UserData({this.uid,this.name,this.sex,this.dob,this.strength,this.whyquit,this.dailyspend,this.startdate,this.frequency,this.score,this.colorVal});
 
 }
