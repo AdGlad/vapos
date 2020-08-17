@@ -66,24 +66,35 @@ class Homebody extends StatelessWidget {
 
 
 
-    return  Container(
+    return  Container( //margin: EdgeInsets.all(20),
       child: GridView.count(
                 // Create a grid with 2 columns. If you change the scrollDirection to
                 // horizontal, this produces 2 rows.
                 crossAxisCount: 2,
                 // Generate 6 widgets that display their index in the List.
                 children: List.generate(8, (index) {
-                  return Container(
-                    width: 50,
-                    height: 50,
-                    child:            FlatButton.icon(
+                  return Container( margin: EdgeInsets.all(40),
+                    //width: 20,
+                    //height: 20,
+                    child:            FlatButton(
                       onPressed: () {
                        navigateToSubPage(context, index);
                        },
-                      icon: Icon(pageicons[index], color: Colors.blue[400],size: 150.0),
-                      label: Text(''),
-                      // label: Text('Page $index'),
+                      child: Column(
+                        children: <Widget>[
+                          Icon(pageicons[index], color: Colors.blue[400],size: 100.0),
+                      Text(pagenames[index]), 
+                        ],
+                      ),         
+                      //icon: Icon(pageicons[index], color: Colors.blue[400],size: 60.0),
                       //label: Text(pagenames[index]),
+                      //label: Text(''),
+                      // label: Text('Page $index'),
+                      shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                      color: Colors.white70,
+                      splashColor: Colors.lightGreen,
+                      //padding: EdgeInsets.all(20.0),
                     ),
                   );
                 }),
