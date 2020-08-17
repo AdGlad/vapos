@@ -18,7 +18,14 @@ DatabaseService({this.uid});
                                int dailyspend,
                                String startdate,
                                int frequency,
-                               String colorVal) async {
+                               String colorVal,
+                               String hunger,
+                               String stress,
+                               String boredom,
+                               String alcohol,
+                               String driving,
+                               String craving,
+                               String justthere) async {
       return await vapeCollection.document(uid).setData({
         'name': name,
         'sex': sex,
@@ -28,8 +35,15 @@ DatabaseService({this.uid});
         'whyquit': whyquit,
         'dailyspend': dailyspend,
         'frequency': frequency,
-         'score': frequency * strength,
-         'colorVal': colorVal,
+        'score': frequency * strength,
+        'colorVal': colorVal,
+        'hunger': hunger,
+        'stress': stress,
+        'boredom': boredom,
+        'alcohol': alcohol,
+        'driving': driving,
+        'craving': craving,
+        'justthere': justthere
     });
  }
 
@@ -53,8 +67,7 @@ List<Vape> _vapeListFromSnapshot(QuerySnapshot snapshot) {
 
 
   Stream<List<Vape>> get vapes {
-    return vapeCollection.snapshots()
-      .map(_vapeListFromSnapshot);
+    return vapeCollection.snapshots().map(_vapeListFromSnapshot);
   }
 //Userdata from snapshot
 
@@ -71,6 +84,13 @@ UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
     frequency: snapshot.data['frequency'],
     score: snapshot.data['score'],
     colorVal: snapshot.data['colorVal'],
+    hunger: snapshot.data['hunger'],
+    stress: snapshot.data['stress'],
+    boredom: snapshot.data['boredom'],
+    alcohol: snapshot.data['alcohol'],
+    driving: snapshot.data['driving'],
+    craving: snapshot.data['craving'],
+    justthere: snapshot.data['justthere']
     );
 }
 

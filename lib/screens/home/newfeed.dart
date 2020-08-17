@@ -10,8 +10,17 @@ class Newsfeed extends StatelessWidget {
         title: Text('Newsfeed Page'),
         //backgroundColor: Colors.redAccent,
       ),
-        body: Center(
-             child: NewsListView()
+        body: 
+        Container( 
+            decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/vaposbg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+            child: Center(
+               child: NewsListView()
+              )
               ),
       );
       }

@@ -8,6 +8,10 @@ import 'package:vapos/screens/home/health.dart';
 import 'package:vapos/screens/home/plan.dart';
 import 'package:vapos/screens/home/chat.dart';
 import 'package:vapos/screens/Vapors/user_list.dart';
+import 'package:vapos/screens/home/settings_form.dart';
+import 'package:vapos/screens/home/updateplan.dart';
+
+
 
 class Homebody extends StatelessWidget {
   @override
@@ -15,7 +19,53 @@ class Homebody extends StatelessWidget {
     List<IconData> pageicons = [Icons.language,Icons.people ,Icons.info,Icons.assessment,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.multiline_chart,Icons.schedule];
 
 
+  
   Widget build(BuildContext context) {
+
+  void _showSettingsPanel() {
+    showModalBottomSheet(context: context, builder: (context) {
+      return Container(
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+          child: SettingsForm(),
+      );
+    });
+  }
+
+  Future navigateToSubPage(context, index) async {
+    print('The value of the index is: $index');
+    if (index == 0)
+      { 
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Newsfeed()));
+    } else if (index == 1)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => UserList() ));
+    } else if (index == 2)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
+    }  else if (index == 3)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => Health () ));
+    } else if (index == 4)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => Chat() ));
+    }  else if (index == 5)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => Rewards() ));
+    } else if (index == 6)
+    {
+       Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
+    }  else if (index == 7)
+    {
+      // Navigator.push(context, MaterialPageRoute(builder: (context) => Plan() ));
+      //Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsForm() ));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Updateplan() ));
+      // \\Navigator.push(context, MaterialPageRoute(builder: (context) => _showSettingsPanel() ));
+    }
+
+}
+
+
+
     return  Container(
       child: GridView.count(
                 // Create a grid with 2 columns. If you change the scrollDirection to
@@ -47,34 +97,6 @@ class Homebody extends StatelessWidget {
           );
   }
 
-  Future navigateToSubPage(context, index) async {
-    print('The value of the index is: $index');
-    if (index == 0)
-      { 
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Newsfeed()));
-    } else if (index == 1)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => UserList() ));
-    } else if (index == 2)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
-    }  else if (index == 3)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Health () ));
-    } else if (index == 4)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Chat() ));
-    }  else if (index == 5)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Rewards() ));
-    } else if (index == 6)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
-    }  else if (index == 7)
-    {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Plan() ));
-    }
 
-}
 
 }

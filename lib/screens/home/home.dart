@@ -16,7 +16,7 @@ class Home extends  StatelessWidget{
 @override
 Widget build(BuildContext context) {
 
-  void _showSettingsPanel() {
+  Widget _showSettingsPanel() {
     showModalBottomSheet(context: context, builder: (context) {
       return Container(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),

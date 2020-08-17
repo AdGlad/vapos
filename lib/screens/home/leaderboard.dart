@@ -33,7 +33,13 @@ class _LeaderHomePageState extends State<LeaderHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Leaders')),
-      body: _buildBody(context),
+      body: Container( decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/vaposbg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: _buildBody(context)),
     );
   } 
     Widget _buildBody(BuildContext context) {
