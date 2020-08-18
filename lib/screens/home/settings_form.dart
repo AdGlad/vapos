@@ -54,27 +54,29 @@ class _SettingsFormState extends State<SettingsForm> {
                       children: <Widget> [
                         Text(
                           'Update your vapping settings.',
-                          style: TextStyle(fontSize: 18.0),
+                          style: TextStyle(fontSize: 16.0),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 5.0),
                         TextFormField(
+                          style: TextStyle(fontSize: 14.0),
                           initialValue: userData.name,
                           decoration: InputDecoration(
-                               labelText: 'Enter your username'
+                               labelText: 'Enter your name',
                               ),
                           validator: (val) => val.isEmpty ? 'Please enter a name' : null,
                           onChanged: (val) => setState(() => _currentName = val),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 5.0),
                         TextFormField(
+                          style: TextStyle(fontSize: 14.0),
                           initialValue: userData.whyquit,
                           decoration: InputDecoration(
-                               labelText: 'Why do you want to quit?'
+                               labelText: 'Motivation to quit?'
                               ),
-                          validator: (val) => val.isEmpty ? 'Why do you want to quit?' : null,
+                          validator: (val) => val.isEmpty ? 'My Health' : null,
                           onChanged: (val) => setState(() => _currentWhyquit = val),
                         ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                         DropdownButtonFormField(
                             value: _currentFrequency ?? userData.frequency,
                             decoration: InputDecoration(
@@ -83,15 +85,15 @@ class _SettingsFormState extends State<SettingsForm> {
                             items: frequency.map((feq) {
                               return DropdownMenuItem(
                                 value: feq,
-                                child: Text('$feq times'),
+                                child: Text('$feq times', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentFrequency = val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                         Text(
                           'Nicotine level',
-                          style: TextStyle(fontSize: 18.0),
+                          style: TextStyle(fontSize: 12.0),
                         ),
                         Slider(
                           label: 'Strength of nicotine in your product? ',
@@ -103,10 +105,10 @@ class _SettingsFormState extends State<SettingsForm> {
                           divisions: 8,
                           onChanged: (val) => setState(() => _currentStrength = val.round()),
                         ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 2.0),
                         Text(
                           'Daily Spend',
-                          style: TextStyle(fontSize: 18.0),
+                          style: TextStyle(fontSize: 12.0),
                         ),
                         Slider(
                           label: 'How much do you spend each day on vaping? ',
@@ -118,7 +120,7 @@ class _SettingsFormState extends State<SettingsForm> {
                           divisions: 20,
                           onChanged: (val) => setState(() => _currentDailyspend = val.round()),
                         ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 2.0),
                         RaisedButton(
                           color: Colors.pink[400],
                           child: Text(

@@ -15,8 +15,8 @@ import 'package:vapos/screens/home/updateplan.dart';
 
 class Homebody extends StatelessWidget {
   @override
-  List<String> pagenames = ['News','Social','Help','Assessment','Chat','Rewards','Leaderboard','Plan'];
-    List<IconData> pageicons = [Icons.language,Icons.people ,Icons.info,Icons.assessment,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.multiline_chart,Icons.schedule];
+  List<String> pagenames = ['News','Alliance','Plan','Health','Chat','Rewards','Leaderboard','Help'];
+    List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.healing,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.list,Icons.info];
 
 
   
@@ -41,7 +41,7 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => UserList() ));
     } else if (index == 2)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => Updateplan() ));
     }  else if (index == 3)
     {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Health () ));
@@ -56,10 +56,7 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
     }  else if (index == 7)
     {
-      // Navigator.push(context, MaterialPageRoute(builder: (context) => Plan() ));
-      //Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsForm() ));
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Updateplan() ));
-      // \\Navigator.push(context, MaterialPageRoute(builder: (context) => _showSettingsPanel() ));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
     }
 
 }
@@ -67,13 +64,23 @@ class Homebody extends StatelessWidget {
 
 
     return  Container( //margin: EdgeInsets.all(20),
+              //margin: EdgeInsets.symmetric(vertical: 50.0),
       child: GridView.count(
+                    childAspectRatio: 1.2,
+                    //shrinkWrap: true,
+
                 // Create a grid with 2 columns. If you change the scrollDirection to
                 // horizontal, this produces 2 rows.
+                //primary: false,
                 crossAxisCount: 2,
+                padding: const EdgeInsets.all(10.0),
+                //mainAxisSpacing: 10.0,
+                //crossAxisSpacing: 00,
+                //childAspectRatio: 8.0 / 9.0,
                 // Generate 6 widgets that display their index in the List.
                 children: List.generate(8, (index) {
-                  return Container( margin: EdgeInsets.all(40),
+                  return Container( 
+                    margin: EdgeInsets.all(20),
                     //width: 20,
                     //height: 20,
                     child:            FlatButton(
@@ -82,7 +89,7 @@ class Homebody extends StatelessWidget {
                        },
                       child: Column(
                         children: <Widget>[
-                          Icon(pageicons[index], color: Colors.blue[400],size: 100.0),
+                          Expanded(child: Icon(pageicons[index], color: Colors.blue[400],size: 100.0)),
                       Text(pagenames[index]), 
                         ],
                       ),         
@@ -91,20 +98,15 @@ class Homebody extends StatelessWidget {
                       //label: Text(''),
                       // label: Text('Page $index'),
                       shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                               borderRadius: BorderRadius.all(Radius.circular(20.0))),
                       color: Colors.white70,
                       splashColor: Colors.lightGreen,
-                      //padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(0.0),
                     ),
                   );
                 }),
               ),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/vaposbg.png'),
-              fit: BoxFit.cover,
-            ),
-          ),
+         
           );
   }
 

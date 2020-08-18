@@ -17,8 +17,10 @@ class Home extends  StatelessWidget{
 Widget build(BuildContext context) {
 
   Widget _showSettingsPanel() {
-    showModalBottomSheet(context: context, builder: (context) {
-      return Container(
+    showModalBottomSheet(
+       // isScrollControlled: true,
+        context: context, builder: (context) {
+      return Container( 
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
           child: SettingsForm(),
       );
@@ -26,6 +28,7 @@ Widget build(BuildContext context) {
   }
 
     return  Scaffold(
+       //resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.blue[50],
       appBar: AppBar(
         title: const Text('Vapos'),
@@ -56,7 +59,20 @@ Widget build(BuildContext context) {
             )
         ],
       ),
-        body: Homebody(),
+        body: 
+        Align(
+     alignment: Alignment.topCenter,
+     
+      child: Container( 
+         decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/vaposbg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+                //height: MediaQuery.of(context).size.height / 1.5,
+                child: Homebody()        ,
+                
         //bottomNavigationBar: BottomNavigationBar (
         //currentIndex: 0, 
         //items: [
@@ -70,6 +86,8 @@ Widget build(BuildContext context) {
           //  ),
         //],
       //),
-      );
+    )
+        )
+    );
   }
 }

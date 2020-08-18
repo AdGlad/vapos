@@ -22,14 +22,14 @@ Future registerWithEmailAndPassword(String email, String password) async
     AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
     FirebaseUser user = result.user;
     await DatabaseService(uid: user.uid).updateUserData('name', 'male', '01/01/2000', 100, 'Health',20, '01/01/2020', 5,'0xFF90A5F5',
-        'hunger',
-        'stress',
-        'boredom',
-        'alcohol',
-        'driving',
-        'craving',
-        'justthere');
-        
+        'Snack Bar',
+        'Laugh',
+        'Read',
+        'Alcohol-free days',
+        'Drive slowly',
+        'Nicotine Patch',
+        'Meditation');
+
     return _userFromFirebaseUser(user);
   }
   catch(e) {
