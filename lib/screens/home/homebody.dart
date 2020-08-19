@@ -15,7 +15,7 @@ import 'package:vapos/screens/home/updateplan.dart';
 
 class Homebody extends StatelessWidget {
   @override
-  List<String> pagenames = ['News','Alliance','Plan','Health','Chat','Rewards','Leaderboard','Help'];
+  List<String> pagenames = ['News','Alliance','Plan','Health','Chat','Rewards','Progress Broad','Help'];
     List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.healing,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.list,Icons.info];
 
 
@@ -99,7 +99,7 @@ class Homebody extends StatelessWidget {
                       // label: Text('Page $index'),
                       shape: RoundedRectangleBorder(
                                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                      color: Colors.white70,
+                      color: Colors.lightBlue[50],
                       splashColor: Colors.lightGreen,
                       padding: EdgeInsets.all(0.0),
                     ),

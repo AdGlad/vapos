@@ -88,7 +88,8 @@ class NewsListView extends StatelessWidget {
 
   Future<List<Article>> _fetchNews() async {
 
-    final newsListAPIUrl = 'https://newsapi.org/v2/everything?qInTitle=(+vaping AND +health)&apiKey=e902985b45cf4d72a4a2f8bb2dc2ae19';
+   // final newsListAPIUrl = 'https://newsapi.org/v2/everything?qInTitle=(+vaping AND +health)&apiKey=e902985b45cf4d72a4a2f8bb2dc2ae19';
+    final newsListAPIUrl = 'https://newsapi.org/v2/everything?qInTitle=(+vaping)&apiKey=e902985b45cf4d72a4a2f8bb2dc2ae19';
     final response = await http.get(newsListAPIUrl);
 
     if (response.statusCode == 200) {

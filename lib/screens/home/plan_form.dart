@@ -63,14 +63,14 @@ class _PlanFormState extends State<PlanForm> {
                         Center( 
                           child: Text(
                           'Your Plan',
-                          style: TextStyle(fontSize: 32.0),
+                          style: TextStyle(fontSize: 28.0),
                         ),
                         ),
                         Text(
                           'Triggers and Tips',
-                          style: TextStyle(fontSize: 18.0),
+                          style: TextStyle(fontSize: 14.0),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 5),
                           DropdownButtonFormField(
                             value: _currenthunger?? userData.hunger,
                             decoration: InputDecoration(
@@ -79,12 +79,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: hungerTip.map((hungerTip) {
                               return DropdownMenuItem(
                                 value: hungerTip,
-                                child: Center( child: Text('$hungerTip')),
+                                child: Center( child: Text('$hungerTip', style: TextStyle(fontSize: 14.0))),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currenthunger = val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                                                 DropdownButtonFormField(
                             value: _currentstress ?? userData.stress,
                             decoration: InputDecoration(
@@ -93,12 +93,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: stressTip.map((stressTip) {
                               return DropdownMenuItem(
                                 value: stressTip,
-                                child: Text('$stressTip'),
+                                child: Text('$stressTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentstress= val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                                                 DropdownButtonFormField(
                             value: _currentboredom ?? userData.boredom,
                             decoration: InputDecoration(
@@ -107,12 +107,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: boredomTip.map((boredomTip) {
                               return DropdownMenuItem(
                                 value: boredomTip,
-                                child: Text('$boredomTip'),
+                                child: Text('$boredomTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentboredom = val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                                                 DropdownButtonFormField(
                             value: _currentalcohol ?? userData.alcohol,
                             decoration: InputDecoration(
@@ -121,12 +121,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: alcoholTip.map((alcoholTip) {
                               return DropdownMenuItem(
                                 value: alcoholTip,
-                                child: Text('$alcoholTip'),
+                                child: Text('$alcoholTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentalcohol = val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                                                 DropdownButtonFormField(
                             value: _currentdriving ?? userData.driving,
                             decoration: InputDecoration(
@@ -135,12 +135,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: drivingTip.map((drivingTip) {
                               return DropdownMenuItem(
                                 value: drivingTip,
-                                child: Text('$drivingTip'),
+                                child: Text('$drivingTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentdriving = val ),
                           ),
-                         SizedBox(height: 10.0),
+                         SizedBox(height: 5.0),
                                                 DropdownButtonFormField(
                             value: _currentcraving ?? userData.craving,
                             decoration: InputDecoration(
@@ -149,12 +149,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: cravingTip.map((cravingTip) {
                               return DropdownMenuItem(
                                 value: cravingTip,
-                                child: Text('$cravingTip'),
+                                child: Text('$cravingTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentcraving = val ),
                           ),
-                          SizedBox(height: 10.0),
+                          SizedBox(height: 5.0),
                           DropdownButtonFormField(
                             value: _currentjustthere ?? userData.justthere,
                             decoration: InputDecoration(
@@ -163,12 +163,12 @@ class _PlanFormState extends State<PlanForm> {
                             items: justthereTip.map((justthereTip) {
                               return DropdownMenuItem(
                                 value: justthereTip,
-                                child: Text('$justthereTip'),
+                                child: Text('$justthereTip', style: TextStyle(fontSize: 14.0)),
                               );
                             }).toList(),
                             onChanged: (val) => setState(() => _currentjustthere = val ),
                           ),
-                        SizedBox(height: 10.0),
+                        SizedBox(height: 5.0),
                         RaisedButton(
                           color: Colors.pink[400],
                           child: Text(
