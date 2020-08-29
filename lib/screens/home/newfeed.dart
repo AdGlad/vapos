@@ -7,7 +7,7 @@ class Newsfeed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Newsfeed Page'),
+        title: Text('Great Vape Debate'),
         //backgroundColor: Colors.redAccent,
       ),
         body: 

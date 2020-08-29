@@ -4,6 +4,7 @@ import 'package:vapos/screens/home/newfeed.dart';
 import 'package:vapos/screens/home/social.dart';
 import 'package:vapos/screens/home/rewards.dart';
 import 'package:vapos/screens/home/leaderboard.dart';
+import 'package:vapos/screens/home/mental_health.dart';
 import 'package:vapos/screens/home/health.dart';
 import 'package:vapos/screens/home/plan.dart';
 import 'package:vapos/screens/home/chat.dart';
@@ -15,8 +16,8 @@ import 'package:vapos/screens/home/updateplan.dart';
 
 class Homebody extends StatelessWidget {
   @override
-  List<String> pagenames = ['News','Alliance','Plan','Health','Chat','Rewards','Progress Broad','Help'];
-    List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.healing,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.list,Icons.info];
+  List<String> pagenames = ['News','Team','Plan','Mental Health','Chat','Rewards','Progress Board','Health'];
+    List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.child_care,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.list,Icons.favorite];
 
 
   
@@ -44,7 +45,7 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Updateplan() ));
     }  else if (index == 3)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Health () ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => MentalHealth () ));
     } else if (index == 4)
     {
        Navigator.push(context, MaterialPageRoute(builder: (context) => Chat() ));
@@ -56,7 +57,7 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
     }  else if (index == 7)
     {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Social() ));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Health() ));
     }
 
 }
