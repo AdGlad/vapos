@@ -42,12 +42,20 @@ class _BreathPageState extends State<BreathPage> with TickerProviderStateMixin{
         title: Text('Breathing Tool'),
         //backgroundColor: Colors.redAccent,
       ),
-      body:Center(
+      body: Container (
+        decoration: BoxDecoration(
+            image: DecorationImage(
+              //image: AssetImage('assets/vaposbg.png'),
+              image: AssetImage('assets/breathebg.jpeg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        child: Center(
         child: Container(
           height: size,
           width:size,
           child: Material(
-            borderRadius: BorderRadius.circular(size/3),
+            borderRadius: BorderRadius.circular(size/100),
             color: Colors.white,
             child: 
               Image.asset('assets/icon.png')
@@ -66,7 +74,7 @@ class _BreathPageState extends State<BreathPage> with TickerProviderStateMixin{
           ),
         ),
       ),
-      
+      ),
     );
   }
 }
