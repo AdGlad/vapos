@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
        //resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        title: const Text('Vapos'),
+        title: const Text('Vepos'),
         backgroundColor: Colors.blue[400],
         elevation: 0.0,
         actions: <Widget>[

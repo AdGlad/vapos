@@ -6,7 +6,7 @@ class Health extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Health'),
+        title: Text('Health Timeline'),
         //backgroundColor: Colors.redAccent,
       ),
              body: Container(

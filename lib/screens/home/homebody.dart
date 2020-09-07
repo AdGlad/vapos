@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'package:vapos/screens/home/breathe.dart';
 import 'package:vapos/screens/home/newfeed.dart';
 import 'package:vapos/screens/home/social.dart';
 import 'package:vapos/screens/home/rewards.dart';
+import 'package:vapos/screens/home/website.dart';
 import 'package:vapos/screens/home/leaderboard.dart';
 import 'package:vapos/screens/home/mental_health.dart';
 import 'package:vapos/screens/home/health.dart';
 import 'package:vapos/screens/home/plan.dart';
-import 'package:vapos/screens/home/chat.dart';
+import 'package:vapos/screens/home/breathe.dart';
 import 'package:vapos/screens/Vapors/user_list.dart';
 import 'package:vapos/screens/home/settings_form.dart';
 import 'package:vapos/screens/home/updateplan.dart';
@@ -16,8 +18,8 @@ import 'package:vapos/screens/home/updateplan.dart';
 
 class Homebody extends StatelessWidget {
   @override
-  List<String> pagenames = ['News','Team','Plan','Mental Health','Chat','Rewards','Progress Board','Health'];
-    List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.child_care,Icons.chat_bubble_outline,Icons.card_giftcard,Icons.list,Icons.favorite];
+  List<String> pagenames = ['News','Team','Plan','Mental Health','Breathe','Website','Progress Board','Health TImeline'];
+  List<IconData> pageicons = [Icons.language,Icons.people ,Icons.calendar_today,Icons.child_care,Icons.record_voice_over,Icons.web,Icons.list,Icons.favorite];
 
 
   
@@ -48,10 +50,10 @@ class Homebody extends StatelessWidget {
        Navigator.push(context, MaterialPageRoute(builder: (context) => MentalHealth () ));
     } else if (index == 4)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Chat() ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => BreathPage() ));
     }  else if (index == 5)
     {
-       Navigator.push(context, MaterialPageRoute(builder: (context) => Rewards() ));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => MyWebView(title: "Vepos Website", selectedUrl: "https://veposapp.wixsite.com/vepos") ));
     } else if (index == 6)
     {
        Navigator.push(context, MaterialPageRoute(builder: (context) => LeaderHomePage() ));
