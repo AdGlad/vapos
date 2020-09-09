@@ -53,7 +53,7 @@ class _SettingsFormState extends State<SettingsForm> {
                     child: Column(
                       children: <Widget> [
                         Text(
-                          'Update your vapping settings.',
+                          'Update your vaping settings.',
                           style: TextStyle(fontSize: 16.0),
                         ),
                         SizedBox(height: 5.0),

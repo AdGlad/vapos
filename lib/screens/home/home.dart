@@ -72,20 +72,6 @@ Widget build(BuildContext context) {
           ),
                 //height: MediaQuery.of(context).size.height / 1.5,
                 child: Homebody()        ,
-                
-        //bottomNavigationBar: BottomNavigationBar (
-        //currentIndex: 0, 
-        //items: [
-        //  BottomNavigationBarItem(
-        //   icon: Icon(Icons.person),
-        //   title: Text('Vapors')
-        //    ),
-          //BottomNavigationBarItem(
-          // icon: Icon(Icons.info),
-          // title: Text('News')
-          //  ),
-        //],
-      //),
     )
         )
     );

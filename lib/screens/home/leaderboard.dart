@@ -70,7 +70,7 @@ class _LeaderHomePageState extends State<LeaderHomePage> {
           child: Column(
             children: <Widget>[
               Text(
-                'Highest Vapors',
+                'Leading Vapers',
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(

@@ -16,7 +16,7 @@ class _UserListState extends State<UserList> {
           value: DatabaseService().vapes,
           child:Scaffold(
       appBar: AppBar(
-        title: const Text('Vapor Users'),
+        title: const Text('Vepos Users'),
         backgroundColor: Colors.blue[400],
         elevation: 0.0,
         actions: <Widget>[
